@@ -1,0 +1,12 @@
+function digPow(n, p){
+  var t = n.toString().split('');
+  var sum = 0;
+  for (var i = 0; i < t.length; i++){
+    sum = sum + Math.pow(t[i],p);
+    p++;
+    console.log(sum);
+  }
+  var result = Number.isInteger(sum/n);
+  if (result) return sum/n;
+  else return -1;
+}
